@@ -1,4 +1,4 @@
-package tagless_initial_typeless
+package tagless_initial_typeunsafe
 
 // add a small Tag which denotes the type of expression (Int, Boolean etc.._
 sealed abstract class Expression(val tag: String)
