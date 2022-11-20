@@ -1,4 +1,7 @@
-import Expression._
+package v1
+
+import v1.Expression.ExpressionOps._
+import v1.Expression.{Add, Literal, Negate}
 
 object Main extends scala.App {
 
@@ -16,5 +19,7 @@ object Main extends scala.App {
       )
     )
 
-  println(View(expression))
+  expression.asString.show()
+  expression.evaluate.show()
+
 }
