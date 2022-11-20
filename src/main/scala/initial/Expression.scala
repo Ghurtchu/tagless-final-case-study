@@ -1,4 +1,4 @@
-package v1
+package initial
 
 
 sealed abstract class Expression extends Product with Serializable
@@ -19,6 +19,5 @@ object Expression {
       def asString: String = View apply self
       def evaluate: Int = Evaluator apply self
     }
-
   }
 }
