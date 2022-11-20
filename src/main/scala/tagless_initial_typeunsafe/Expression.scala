@@ -4,12 +4,12 @@ package tagless_initial_typeunsafe
 sealed abstract class Expression(val tag: String)
 
 object Expression {
-  final case class Literal(b: Boolean)                      extends Expression("Boolean")
+  final case class Literal(b: Boolean)                       extends Expression("Boolean")
   final case class And(left: Expression, right1: Expression) extends Expression("Boolean")
-  final case class Or(left: Expression, right: Expression)  extends Expression("Boolean")
-  final case class Not(expression: Expression)              extends Expression("Boolean")
-  final case class I(int: Int)                              extends Expression("Integer")
-  final case class Add(left: Expression, right: Expression) extends Expression("Integer")
+  final case class Or(left: Expression, right: Expression)   extends Expression("Boolean")
+  final case class Not(expression: Expression)               extends Expression("Boolean")
+  final case class I(int: Int)                               extends Expression("Integer")
+  final case class Add(left: Expression, right: Expression)  extends Expression("Integer")
 
   // it is type unsafe
   // plus the tags can be different which makes the implementation really really verbose
